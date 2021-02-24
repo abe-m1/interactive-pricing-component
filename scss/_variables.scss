@@ -12,3 +12,32 @@ $lightGrayishBlue: hsl(224, 65%, 95%); //Empty Slider Bar
 $lightGrayishBlue: hsl(223, 50%, 87%); //Toggle Background
 $grayishBlue: hsl(225, 20%, 60%); //Text
 $darkDesaturatedBlue: hsl(227, 35%, 25%); //Text & CTA Background
+
+//mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+}
