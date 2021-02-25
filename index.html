@@ -22,11 +22,27 @@
       <p>Sign-up for our 30-day trial.</p>
       <p>No credit card required.</p>
       <div class="card">
-        <p>## Pageviews</p>
+        <p class="pageviews">## Pageviews</p>
 
-        <!-- slider code -->
-        <span>$ /month</span>
-        <span>Monthly Billing Yearly Billing</span><span>25% discount</span>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="5"
+            value="3"
+            class="slider"
+            id="myRange"
+          />
+        </div>
+        <span class="monthly"> /month</span>
+        <div>
+          <span>Monthly Billing</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span> Yearly Billing</span><span>25% discount</span>
+        </div>
         <hr />
         <p>Unlimited websites</p>
         <p>100% data ownership</p>
@@ -41,5 +57,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
