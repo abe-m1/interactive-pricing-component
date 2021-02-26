@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 @import 'reset';
 @import 'variables';
-// @import 'switch';
+@import 'switch';
 @import 'slider';
 
 html {
@@ -23,16 +23,53 @@ html {
 body {
   font-family: 'Manrope', Helvetica, sans-serif;
   font-size: 1.5rem;
+  background-color: $veryPaleBlue;
+}
+
+.top-text {
+  padding-top: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .card {
   width: 90%;
   background-color: $white;
   margin: auto;
-  border: 1px solid black;
   border-radius: 7px;
   text-align: center;
   padding: 2rem;
+}
+
+.pageviews {
+  margin-bottom: 2rem;
+}
+
+.monthly {
+  margin-bottom: 2rem;
+}
+
+.monthly-dollar {
+  font-size: 3rem;
+}
+
+.discount {
+  background-color: $lightGrayishRed;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+
+.slide-component {
+  position: relative;
+}
+.progress-overlay {
+  position: absolute;
+  width: 50%;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background: hsl(174, 77%, 80%);
+  border-radius: 10px;
 }
 
 .attribution {

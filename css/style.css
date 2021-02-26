@@ -87,6 +87,60 @@ img:not([alt]) {
   width: 1px !important;
   white-space: nowrap !important; }
 
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px; }
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+/* The slider */
+.slide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+
+.slide:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+
+.check:checked + .slide {
+  background-color: #2196f3; }
+
+.check:focus + .slide {
+  box-shadow: 0 0 1px #2196f3; }
+
+.check:checked + .slide:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.slide.round {
+  border-radius: 34px; }
+
+.slide.round:before {
+  border-radius: 50%; }
+
 .slidecontainer {
   width: 100%;
   /* Width of the outside container */ }
@@ -105,11 +159,12 @@ img:not([alt]) {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #4caf50;
-  cursor: pointer; }
+  background: #10d5c2;
+  cursor: pointer;
+  z-index: 10; }
 
 .slider::-moz-range-thumb {
   width: 25px;
@@ -135,16 +190,47 @@ html {
 
 body {
   font-family: 'Manrope', Helvetica, sans-serif;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  background-color: #fafbff; }
+
+.top-text {
+  padding-top: 4rem;
+  margin-bottom: 3rem;
+  text-align: center; }
 
 .card {
   width: 90%;
-  background-color: hsl 0, 0%, 100%;
+  background-color: white;
   margin: auto;
-  border: 1px solid black;
   border-radius: 7px;
   text-align: center;
   padding: 2rem; }
+
+.pageviews {
+  margin-bottom: 2rem; }
+
+.monthly {
+  margin-bottom: 2rem; }
+
+.monthly-dollar {
+  font-size: 3rem; }
+
+.discount {
+  background-color: #feece7;
+  border-radius: 10px;
+  padding: 0.3rem; }
+
+.slide-component {
+  position: relative; }
+
+.progress-overlay {
+  position: absolute;
+  width: 50%;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background: #a5f3eb;
+  border-radius: 10px; }
 
 .attribution {
   font-size: 11px;

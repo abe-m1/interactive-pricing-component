@@ -17,11 +17,12 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #4caf50;
+  background: $strongCyan;
   cursor: pointer;
+  z-index: 10;
 }
 
 .slider::-moz-range-thumb {
