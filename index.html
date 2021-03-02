@@ -27,35 +27,45 @@
       <div class="card">
         <p class="pageviews">100k pageviews</p>
         <div class="slide-component">
-          <div class="slidecontainer">
+          <div class="slide-bar">
             <input
               type="range"
-              min="1"
-              max="5"
-              value="3"
-              class="slider"
-              id="myRange"
+              id="input"
+              min="0"
+              value="2"
+              max="4"
+              step="1"
+              class="sli"
+              style="position: absolute"
             />
+            <div class="progress-overlay"></div>
           </div>
-          <div class="progress-overlay"></div>
         </div>
 
         <div class="monthly">
           <span class="monthly-dollar">$16.00</span>/month
         </div>
-        <div>
-          <span>Monthly Billing</span>
+        <div class="billing-container">
+          <span class="billing">Monthly Billing</span>
           <label class="switch">
             <input class="check" type="checkbox" />
             <span class="slide round"></span>
           </label>
-          <span> Yearly Billing</span><span class="discount">25% discount</span>
+          <span class="billing"> Yearly Billing</span>
+          <!-- <span class="discount">25% discount</span> -->
+          <span class="discount">25%</span>
         </div>
         <hr />
-        <p>Unlimited websites</p>
-        <p>100% data ownership</p>
-        <p>Email reports</p>
-        <button>Start my trial</button>
+        <div class="benefits">
+          <img src="/images/icon-check.svg" alt="check" />Unlimited websites
+        </div>
+        <div class="benefits">
+          <img src="/images/icon-check.svg" alt="check" />100% data ownership
+        </div>
+        <div class="benefits">
+          <img src="/images/icon-check.svg" alt="check" />Email reports
+        </div>
+        <button class="start-button">Start my trial</button>
       </div>
     </div>
 

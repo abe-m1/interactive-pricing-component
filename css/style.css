@@ -91,8 +91,9 @@ img:not([alt]) {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px; }
+  width: 53px;
+  height: 24px;
+  margin: 0 1rem; }
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -115,10 +116,10 @@ img:not([alt]) {
 .slide:before {
   position: absolute;
   content: '';
-  height: 26px;
-  width: 26px;
+  height: 20px;
+  width: 20px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s; }
@@ -146,32 +147,95 @@ img:not([alt]) {
   /* Width of the outside container */ }
 
 .slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s; }
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cdd7ee;
+  transition: 0.4s; }
 
-.slider::-webkit-slider-thumb {
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 60%;
+  width: 35%;
+  left: 6%;
+  bottom: 18%;
+  background-color: white;
+  transition: 0.4s; }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3; }
+
+.slider.round {
+  border-radius: 60px; }
+
+.slider.round:before {
+  border-radius: 60px; }
+
+input:checked + .slider:before {
+  transform: translateX(150%); }
+
+input:checked + .slider {
+  background-color: #10d5c2; }
+
+.slide-bar {
+  position: relative;
+  width: 100%;
+  border-radius: 3px;
+  height: 8px;
+  background: #eaeefb;
+  margin-top: 1rem; }
+
+.slide-bar img {
+  position: absolute; }
+
+input[type='range'] {
   -webkit-appearance: none;
-  appearance: none;
+  z-index: 9;
+  background: transparent; }
+
+input[type='range']:focus {
+  outline: none; }
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #10d5c2;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #10d5c2;
+  box-shadow: #10d5c2 3px 10px 35px;
   cursor: pointer;
-  z-index: 10; }
+  position: relative;
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center; }
 
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4caf50;
-  cursor: pointer; }
+#input {
+  width: 100%;
+  display: block;
+  margin: 0;
+  height: 8px;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 5px;
+  position: absolute; }
+
+input[type='range']::-moz-range-track {
+  border: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  background: invisible;
+  width: 100%; }
+
+input[type='range']::-webkit-slider-runnable-track {
+  border: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  background: invisible;
+  width: 100%; }
 
 html {
   font-size: 62.5%; }
@@ -191,12 +255,19 @@ html {
 body {
   font-family: 'Manrope', Helvetica, sans-serif;
   font-size: 1.5rem;
-  background-color: #fafbff; }
+  background-image: url(/images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-color: #fafbff;
+  background-position-y: -10%; }
 
 .top-text {
-  padding-top: 4rem;
+  padding: 4rem;
   margin-bottom: 3rem;
-  text-align: center; }
+  text-align: center;
+  background-image: url(/images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center; }
 
 .card {
   width: 90%;
@@ -207,30 +278,54 @@ body {
   padding: 2rem; }
 
 .pageviews {
-  margin-bottom: 2rem; }
+  margin-bottom: 4rem; }
 
 .monthly {
   margin-bottom: 2rem; }
 
 .monthly-dollar {
-  font-size: 3rem; }
+  font-size: 3rem;
+  margin-right: 1rem; }
+
+.billing-container {
+  margin-bottom: 4rem; }
+
+.billing {
+  font-size: 1.2rem; }
 
 .discount {
   background-color: #feece7;
   border-radius: 10px;
   padding: 0.3rem; }
 
+.benefits {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+  .benefits:last-of-type {
+    margin-bottom: 3rem; }
+
 .slide-component {
-  position: relative; }
+  position: relative;
+  margin-bottom: 5rem; }
 
 .progress-overlay {
   position: absolute;
   width: 50%;
-  height: 16px;
+  height: 12px;
   top: 0;
   left: 0;
   background: #a5f3eb;
   border-radius: 10px; }
+
+.start-button {
+  color: white;
+  background-color: #293356;
+  border-radius: 40px;
+  border: none;
+  padding: 1rem 3rem; }
 
 .attribution {
   font-size: 11px;

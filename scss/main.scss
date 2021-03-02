@@ -23,13 +23,21 @@ html {
 body {
   font-family: 'Manrope', Helvetica, sans-serif;
   font-size: 1.5rem;
+  background-image: url(/images/bg-pattern.svg);
+
+  background-repeat: no-repeat;
   background-color: $veryPaleBlue;
+  background-position-y: -10%;
 }
 
 .top-text {
-  padding-top: 4rem;
+  padding: 4rem;
   margin-bottom: 3rem;
   text-align: center;
+  background-image: url(/images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 
 .card {
@@ -42,7 +50,7 @@ body {
 }
 
 .pageviews {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .monthly {
@@ -51,25 +59,54 @@ body {
 
 .monthly-dollar {
   font-size: 3rem;
+  margin-right: 1rem;
 }
 
+.billing-container {
+  margin-bottom: 4rem;
+}
+
+.billing {
+  font-size: 1.2rem;
+}
 .discount {
   background-color: $lightGrayishRed;
   border-radius: 10px;
   padding: 0.3rem;
 }
 
+.benefits {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &:last-of-type {
+    margin-bottom: 3rem;
+  }
+}
+
 .slide-component {
   position: relative;
+  margin-bottom: 5rem;
 }
 .progress-overlay {
   position: absolute;
   width: 50%;
-  height: 16px;
+  height: 12px;
   top: 0;
   left: 0;
   background: hsl(174, 77%, 80%);
   border-radius: 10px;
+}
+
+.start-button {
+  color: $white;
+  background-color: $darkDesaturatedBlue;
+  border-radius: 40px;
+  border: none;
+  padding: 1rem 3rem;
 }
 
 .attribution {
