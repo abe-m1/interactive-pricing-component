@@ -124,12 +124,6 @@ img:not([alt]) {
   -webkit-transition: 0.4s;
   transition: 0.4s; }
 
-.check:checked + .slide {
-  background-color: #2196f3; }
-
-.check:focus + .slide {
-  box-shadow: 0 0 1px #2196f3; }
-
 .check:checked + .slide:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -242,10 +236,10 @@ html {
   @media (min-width: 600px) {
     html {
       font-size: 50%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 900px) {
     html {
       font-size: 50%; } }
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     html {
       font-size: 56.25%; } }
   @media (min-width: 1800px) {
@@ -260,14 +254,42 @@ body {
   background-color: #fafbff;
   background-position-y: -10%; }
 
+.container {
+  margin-bottom: 5rem; }
+  @media (min-width: 900px) {
+    .container {
+      height: 100vh; } }
+
 .top-text {
-  padding: 4rem;
+  padding: 3.5rem 2.5rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
   text-align: center;
   background-image: url(/images/pattern-circles.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center; }
+  @media (min-width: 900px) {
+    .top-text {
+      margin-bottom: 3rem;
+      padding: 5.5rem 2.5rem; } }
+
+@media (min-width: 600px) {
+  .top-text h2 {
+    font-size: 3rem; } }
+
+@media (min-width: 900px) {
+  .top-text h2 {
+    font-size: 3.1rem; } }
+
+.top-text p {
+  margin: auto;
+  width: 66%;
+  color: #858fad; }
+  @media (min-width: 900px) {
+    .top-text p {
+      font-size: 1.8rem;
+      width: 100%; } }
 
 .card {
   width: 90%;
@@ -275,8 +297,13 @@ body {
   background-color: white;
   margin: auto;
   border-radius: 7px;
-  text-align: center;
+  text-align: center; }
+
+.card-top-container {
   padding: 2rem; }
+  @media (min-width: 900px) {
+    .card-top-container {
+      padding: 5rem 4rem 3rem 4rem; } }
 
 .card-top {
   display: flex;
@@ -285,6 +312,15 @@ body {
     .card-top {
       flex-direction: row;
       flex-wrap: wrap; } }
+
+hr {
+  background-color: #cdd7ee;
+  border: none;
+  height: 1px;
+  margin-bottom: 4rem; }
+  @media (min-width: 900px) {
+    hr {
+      margin-bottom: 3rem; } }
 
 .card-bottom {
   display: flex;
@@ -296,14 +332,18 @@ body {
       align-items: center; } }
 
 .pageviews {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  color: #858fad;
+  text-transform: uppercase;
+  font-weight: 600; }
   @media (min-width: 900px) {
     .pageviews {
       flex: 50%;
       order: 1; } }
 
 .monthly {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  color: #858fad; }
   @media (min-width: 900px) {
     .monthly {
       flex: 50%;
@@ -311,29 +351,53 @@ body {
 
 .monthly-dollar {
   font-size: 3rem;
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  font-weight: 800;
+  color: #000; }
 
 .billing-container {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  position: relative; }
+  @media (min-width: 900px) {
+    .billing-container {
+      margin-bottom: 0; } }
 
 .billing {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  color: #858fad; }
 
 .discount {
+  margin-left: 1.5rem;
   background-color: #feece7;
-  border-radius: 10px;
-  padding: 0.3rem; }
+  color: #ff8c66;
+  border-radius: 25px;
+  padding: 0.3rem 0.7rem;
+  font-size: 1.2rem;
+  position: absolute; }
 
-hr {
-  margin-bottom: 4rem; }
+.discount-wide {
+  display: none; }
+  @media (min-width: 900px) {
+    .discount-wide {
+      display: inline-block; } }
 
 .benefits {
-  margin-bottom: 1rem;
   display: flex;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.2rem;
+  color: #858fad;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1rem; }
   .benefits:last-of-type {
     margin-bottom: 3rem; }
+    @media (min-width: 900px) {
+      .benefits:last-of-type {
+        margin-bottom: 2rem; } }
+  @media (min-width: 900px) {
+    .benefits {
+      width: 100%; } }
 
 .slide-component {
   position: relative;
@@ -357,7 +421,8 @@ hr {
   background-color: #293356;
   border-radius: 40px;
   border: none;
-  padding: 1rem 3rem; }
+  padding: 1rem 3rem;
+  margin-bottom: 4rem; }
 
 .attribution {
   font-size: 11px;

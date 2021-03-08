@@ -43,13 +43,13 @@
   transition: 0.4s;
 }
 
-.check:checked + .slide {
-  background-color: #2196f3;
-}
+// .check:checked + .slide {
+//   background-color: #2196f3;
+// }
 
-.check:focus + .slide {
-  box-shadow: 0 0 1px #2196f3;
-}
+// .check:focus + .slide {
+//   box-shadow: 0 0 1px #2196f3;
+// }
 
 .check:checked + .slide:before {
   -webkit-transform: translateX(26px);

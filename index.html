@@ -20,42 +20,45 @@
     <div class="container">
       <div class="top-text">
         <h2>Simple, traffic-based pricing</h2>
-        <p>Sign-up for our 30-day trial.</p>
-        <p>No credit card required.</p>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
       </div>
 
       <div class="card">
-        <div class="card-top">
-          <p class="pageviews">100k pageviews</p>
-          <div class="slide-component">
-            <div class="slide-bar">
-              <input
-                type="range"
-                id="input"
-                min="0"
-                value="2"
-                max="4"
-                step="1"
-                class="sli"
-                style="position: absolute"
-              />
-              <div class="progress-overlay"></div>
+        <div class="card-top-container">
+          <div class="card-top">
+            <p class="pageviews">100k pageviews</p>
+            <div class="slide-component">
+              <div class="slide-bar">
+                <input
+                  type="range"
+                  id="input"
+                  min="0"
+                  value="2"
+                  max="4"
+                  step="1"
+                  class="sli"
+                  style="position: absolute"
+                />
+                <div class="progress-overlay"></div>
+              </div>
+            </div>
+
+            <div class="monthly">
+              <span class="monthly-dollar">$16.00</span>/month
             </div>
           </div>
-
-          <div class="monthly">
-            <span class="monthly-dollar">$16.00</span>/month
+          <div class="billing-container">
+            <span class="billing">Monthly Billing</span>
+            <label class="switch">
+              <input class="check" type="checkbox" />
+              <span class="slide round"></span>
+            </label>
+            <span class="billing"> Yearly Billing</span>
+            <!-- <span class="discount">25% discount</span> -->
+            <span class="discount"
+              >25% <span class="discount-wide">discount</span></span
+            >
           </div>
-        </div>
-        <div class="billing-container">
-          <span class="billing">Monthly Billing</span>
-          <label class="switch">
-            <input class="check" type="checkbox" />
-            <span class="slide round"></span>
-          </label>
-          <span class="billing"> Yearly Billing</span>
-          <!-- <span class="discount">25% discount</span> -->
-          <span class="discount">25%</span>
         </div>
         <hr />
         <div class="card-bottom">
