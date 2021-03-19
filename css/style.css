@@ -253,6 +253,9 @@ body {
   background-repeat: no-repeat;
   background-color: #fafbff;
   background-position-y: -10%; }
+  @media (min-width: 900px) {
+    body {
+      background-position-y: 0; } }
 
 .container {
   margin-bottom: 5rem; }
@@ -261,9 +264,9 @@ body {
       height: 100vh; } }
 
 .top-text {
+  margin-top: 5rem;
   padding: 3.5rem 2.5rem;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.7rem;
   text-align: center;
   background-image: url(/images/pattern-circles.svg);
   background-repeat: no-repeat;
@@ -271,16 +274,19 @@ body {
   background-position: center; }
   @media (min-width: 900px) {
     .top-text {
-      margin-bottom: 3rem;
-      padding: 5.5rem 2.5rem; } }
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      padding: 7.5rem 2.5rem; } }
 
-@media (min-width: 600px) {
-  .top-text h2 {
-    font-size: 3rem; } }
-
-@media (min-width: 900px) {
-  .top-text h2 {
-    font-size: 3.1rem; } }
+.top-text h2 {
+  margin-bottom: 1.2rem; }
+  @media (min-width: 600px) {
+    .top-text h2 {
+      font-size: 3rem; } }
+  @media (min-width: 900px) {
+    .top-text h2 {
+      font-size: 3.1rem;
+      margin-bottom: 1rem; } }
 
 .top-text p {
   margin: auto;
@@ -297,13 +303,17 @@ body {
   background-color: white;
   margin: auto;
   border-radius: 7px;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 900px) {
+    .card {
+      max-width: 550px; } }
 
 .card-top-container {
-  padding: 2rem; }
+  padding: 3rem 2rem 2rem 2rem; }
   @media (min-width: 900px) {
     .card-top-container {
-      padding: 5rem 4rem 3rem 4rem; } }
+      padding: 4.5rem 4rem 4rem 4rem; } }
 
 .card-top {
   display: flex;
@@ -317,7 +327,7 @@ hr {
   background-color: #cdd7ee;
   border: none;
   height: 1px;
-  margin-bottom: 4rem; }
+  margin-bottom: 2.5rem; }
   @media (min-width: 900px) {
     hr {
       margin-bottom: 3rem; } }
@@ -329,34 +339,47 @@ hr {
     .card-bottom {
       flex-direction: row;
       justify-content: space-around;
-      align-items: center; } }
+      align-items: center;
+      padding-bottom: 2rem; } }
 
 .pageviews {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   color: #858fad;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: 400; }
   @media (min-width: 900px) {
     .pageviews {
+      font-size: 1.7rem;
+      font-weight: 800;
       flex: 50%;
-      order: 1; } }
+      order: 1;
+      letter-spacing: 2px;
+      padding-top: 2rem;
+      margin-bottom: 4rem;
+      font-weight: 600; } }
 
 .monthly {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   color: #858fad; }
   @media (min-width: 900px) {
     .monthly {
       flex: 50%;
-      order: 2; } }
+      order: 2;
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem; } }
 
 .monthly-dollar {
-  font-size: 3rem;
+  font-size: 3.4rem;
   margin-right: 1rem;
   font-weight: 800;
   color: #000; }
+  @media (min-width: 900px) {
+    .monthly-dollar {
+      font-size: 4.3rem; } }
 
 .billing-container {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   position: relative; }
   @media (min-width: 900px) {
     .billing-container {
@@ -367,13 +390,16 @@ hr {
   color: #858fad; }
 
 .discount {
-  margin-left: 1.5rem;
+  margin-left: 0.9rem;
   background-color: #feece7;
   color: #ff8c66;
   border-radius: 25px;
   padding: 0.3rem 0.7rem;
   font-size: 1.2rem;
   position: absolute; }
+  @media (min-width: 900px) {
+    .discount {
+      margin-left: 1.5rem; } }
 
 .discount-wide {
   display: none; }
@@ -383,13 +409,15 @@ hr {
 
 .benefits {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   font-size: 1.2rem;
   color: #858fad;
   width: 50%;
   margin: auto;
   margin-bottom: 1rem; }
+  @media (min-width: 900px) {
+    .benefits {
+      font-size: 1.4rem; } }
   .benefits:last-of-type {
     margin-bottom: 3rem; }
     @media (min-width: 900px) {
@@ -399,13 +427,17 @@ hr {
     .benefits {
       width: 100%; } }
 
+.benefits img {
+  margin-right: 2rem; }
+
 .slide-component {
   position: relative;
-  margin-bottom: 5rem; }
+  margin-bottom: 3rem; }
   @media (min-width: 900px) {
     .slide-component {
       flex: 100%;
-      order: 3; } }
+      order: 3;
+      margin-bottom: 6rem; } }
 
 .progress-overlay {
   position: absolute;
@@ -417,12 +449,15 @@ hr {
   border-radius: 10px; }
 
 .start-button {
-  color: white;
+  color: #cdd7ee;
   background-color: #293356;
   border-radius: 40px;
   border: none;
-  padding: 1rem 3rem;
-  margin-bottom: 4rem; }
+  padding: 1rem 4rem;
+  margin-bottom: 3rem; }
+  @media (min-width: 900px) {
+    .start-button {
+      margin-bottom: 2rem; } }
 
 .attribution {
   font-size: 11px;

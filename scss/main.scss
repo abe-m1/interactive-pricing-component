@@ -30,6 +30,9 @@ body {
   background-repeat: no-repeat;
   background-color: $veryPaleBlue;
   background-position-y: -10%;
+  @include respond(tab-port) {
+    background-position-y: 0;
+  }
 }
 
 .container {
@@ -40,27 +43,30 @@ body {
 }
 
 .top-text {
+  margin-top: 5rem;
   padding: 3.5rem 2.5rem;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.7rem;
   text-align: center;
   background-image: url(/images/pattern-circles.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
   @include respond(tab-port) {
-    margin-bottom: 3rem;
-    padding: 5.5rem 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding: 7.5rem 2.5rem;
   }
 }
 
 .top-text h2 {
+  margin-bottom: 1.2rem;
   @include respond(phone) {
     font-size: 3rem;
   }
 
   @include respond(tab-port) {
     font-size: 3.1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -81,13 +87,18 @@ body {
   margin: auto;
   border-radius: 7px;
   text-align: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+
+  @include respond(tab-port) {
+    max-width: 550px;
+  }
 }
 
 .card-top-container {
-  padding: 2rem;
+  padding: 3rem 2rem 2rem 2rem;
 
   @include respond(tab-port) {
-    padding: 5rem 4rem 3rem 4rem;
+    padding: 4.5rem 4rem 4rem 4rem;
   }
 }
 
@@ -105,7 +116,7 @@ hr {
   background-color: $lightGrayishBlue;
   border: none;
   height: 1px;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 
   @include respond(tab-port) {
     margin-bottom: 3rem;
@@ -120,40 +131,53 @@ hr {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 2rem;
   }
 }
 
 .pageviews {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   color: $grayishBlue;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
 
   @include respond(tab-port) {
+    font-size: 1.7rem;
+    font-weight: 800;
     flex: 50%;
     order: 1;
+    letter-spacing: 2px;
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 600;
   }
 }
 
 .monthly {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   color: $grayishBlue;
 
   @include respond(tab-port) {
     flex: 50%;
     order: 2;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
   }
 }
 
 .monthly-dollar {
-  font-size: 3rem;
+  font-size: 3.4rem;
   margin-right: 1rem;
   font-weight: 800;
   color: #000;
+  @include respond(tab-port) {
+    font-size: 4.3rem;
+  }
 }
 
 .billing-container {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   position: relative;
   @include respond(tab-port) {
     margin-bottom: 0;
@@ -165,13 +189,17 @@ hr {
   color: $grayishBlue;
 }
 .discount {
-  margin-left: 1.5rem;
+  margin-left: 0.9rem;
   background-color: $lightGrayishRed;
   color: $lightRed;
   border-radius: 25px;
   padding: 0.3rem 0.7rem;
   font-size: 1.2rem;
   position: absolute;
+
+  @include respond(tab-port) {
+    margin-left: 1.5rem;
+  }
 }
 
 .discount-wide {
@@ -183,13 +211,17 @@ hr {
 
 .benefits {
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   align-items: center;
   font-size: 1.2rem;
   color: $grayishBlue;
   width: 50%;
   margin: auto;
   margin-bottom: 1rem;
+
+  @include respond(tab-port) {
+    font-size: 1.4rem;
+  }
 
   &:last-of-type {
     margin-bottom: 3rem;
@@ -204,13 +236,18 @@ hr {
   }
 }
 
+.benefits img {
+  margin-right: 2rem;
+}
+
 .slide-component {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
   @include respond(tab-port) {
     flex: 100%;
     order: 3;
+    margin-bottom: 6rem;
   }
 }
 .progress-overlay {
@@ -224,12 +261,16 @@ hr {
 }
 
 .start-button {
-  color: $white;
+  color: $lightGrayishBlue;
   background-color: $darkDesaturatedBlue;
   border-radius: 40px;
   border: none;
-  padding: 1rem 3rem;
-  margin-bottom: 4rem;
+  padding: 1rem 4rem;
+  margin-bottom: 3rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem;
+  }
 }
 
 .attribution {
